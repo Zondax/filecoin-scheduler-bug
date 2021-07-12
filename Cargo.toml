@@ -1,0 +1,40 @@
+[package]
+name = "test_hang"
+version = "0.1.0"
+authors = ["neithanmo <neithanmo@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.40"
+fil_logger = "0.1.2"
+filecoin-hashers = { package = "filecoin-hashers", git = "https://github.com/Zondax/rust-fil-proofs.git", branch="scheduler", default-features = true}
+filecoin-proofs = { package = "filecoin-proofs", git = "https://github.com/Zondax/rust-fil-proofs.git", branch="scheduler",  default-features = true}
+storage-proofs-core =  { package = "storage-proofs-core", git = "https://github.com/Zondax/rust-fil-proofs.git", branch="scheduler"}
+rand = "0.7"
+rand_xorshift = "0.2.0"
+byte-slice-cast = "1.0.0"
+tempdir = "0.3.7"
+bellperson = "0.14.0"
+tempfile = "3.2.0"
+ff = { version = "0.3.1", package = "fff" }
+clap = "2.33.3"
+groupy = "0.4.1"
+
+[patch.crates-io]
+bellperson = { git = "https://github.com/Zondax/bellperson.git", branch = "scheduler", version = "0.14", default-features = false }
+neptune = { version = "3.0.0", default-features = false, git = "https://github.com/filecoin-project/neptune.git", branch = "granularity" }
+
+
+[profile.dev]
+opt-level = 0
+debug = true 
+[profile.release]
+debug = true
+
+[[bin]]
+name = "parallel_mimc"
+path = "src/parallel_mimc.rs"
+
+[[bin]]
+name = "hang"
+path = "src/hang.rs"
