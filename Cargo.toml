@@ -24,10 +24,12 @@ groupy = "0.4.1"
 bellperson = { git = "https://github.com/Zondax/bellperson.git", branch = "scheduler", version = "0.14", default-features = false }
 neptune = { version = "3.0.0", default-features = false, git = "https://github.com/filecoin-project/neptune.git", branch = "granularity" }
 
+[patch."https://github.com/Zondax/filecoin-scheduling.git"]
+client = { path = '../filecoin-scheduling/client' }
 
 [profile.dev]
 opt-level = 0
-debug = true 
+debug = true
 [profile.release]
 debug = true
 

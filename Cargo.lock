@@ -68,9 +68,9 @@ dependencies = [
 
 [[package]]
 name = "anyhow"
-version = "1.0.41"
+version = "1.0.42"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "15af2628f6890fe2609a3b91bef4c83450512802e59489f9c1cb1fa5df064a61"
+checksum = "595d3cfa7a60d4555cb5067b99f07142a08ea778de5cf993f7b75c7d8fabc486"
 
 [[package]]
 name = "array_tool"
@@ -131,7 +131,7 @@ checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 [[package]]
 name = "bellperson"
 version = "0.14.2"
-source = "git+https://github.com/Zondax/bellperson.git?branch=scheduler#b72f59db05dfadc3594c1c614f1ce13d57760d11"
+source = "git+https://github.com/Zondax/bellperson.git?branch=scheduler#6ea2264169b5754e46811dc31d1b269cc30a0bf7"
 dependencies = [
  "bincode",
  "bit-vec",
@@ -313,9 +313,9 @@ checksum = "b700ce4376041dcd0a327fd0097c41095743c4c8af8887265942faf1100bd040"
 
 [[package]]
 name = "cc"
-version = "1.0.68"
+version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a72c244c1ff497a746a7e1fb3d14bd08420ecda70c8f25c7112f2781652d787"
+checksum = "e70cc2f62c6ce1868963827bd677764c62d07c3d9a3e1fb1177ee1a9ab199eb2"
 
 [[package]]
 name = "cfg-if"
@@ -379,7 +379,6 @@ dependencies = [
 [[package]]
 name = "client"
 version = "0.1.0"
-source = "git+https://github.com/Zondax/filecoin-scheduling.git#2214e50e8e6ee72e11eb6b7e754f2e32c29e1bb9"
 dependencies = [
  "chrono",
  "common",
@@ -402,7 +401,6 @@ dependencies = [
 [[package]]
 name = "common"
 version = "0.1.0"
-source = "git+https://github.com/Zondax/filecoin-scheduling.git#2214e50e8e6ee72e11eb6b7e754f2e32c29e1bb9"
 dependencies = [
  "chrono",
  "num_cpus",
@@ -644,13 +642,14 @@ dependencies = [
 
 [[package]]
 name = "derive_more"
-version = "0.99.14"
+version = "0.99.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5cc7b9cef1e351660e5443924e4f43ab25fbbed3e9a5f052df3677deb4d6b320"
+checksum = "40eebddd2156ce1bb37b20bbe5151340a31828b1f2d22ba4141f3531710e38df"
 dependencies = [
  "convert_case",
  "proc-macro2",
  "quote",
+ "rustc_version",
  "syn",
 ]
 
@@ -843,7 +842,7 @@ dependencies = [
 [[package]]
 name = "filecoin-hashers"
 version = "3.0.2"
-source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#581ecd13560dbb3386f2b714c490e8cb37622ab6"
+source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#4c8571353caf9d540f4e022cecf842939a8f893a"
 dependencies = [
  "anyhow",
  "bellperson",
@@ -862,7 +861,7 @@ dependencies = [
 [[package]]
 name = "filecoin-proofs"
 version = "8.0.2"
-source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#581ecd13560dbb3386f2b714c490e8cb37622ab6"
+source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#4c8571353caf9d540f4e022cecf842939a8f893a"
 dependencies = [
  "anyhow",
  "bellperson",
@@ -943,7 +942,7 @@ dependencies = [
 [[package]]
 name = "fr32"
 version = "1.0.2"
-source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#581ecd13560dbb3386f2b714c490e8cb37622ab6"
+source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#4c8571353caf9d540f4e022cecf842939a8f893a"
 dependencies = [
  "anyhow",
  "bellperson",
@@ -1200,16 +1199,16 @@ dependencies = [
  "http",
  "indexmap",
  "slab",
- "tokio 1.7.1",
+ "tokio 1.8.1",
  "tokio-util 0.6.7",
  "tracing",
 ]
 
 [[package]]
 name = "hashbrown"
-version = "0.9.1"
+version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d7afe4a420e3fe79967a00898cc1f4db7c8a49a9333a29f8a4bd76a253d5cd04"
+checksum = "ab5ef0d4909ef3724cc8cce6ccc8572c5c817592e9285f5464f8e86f8bd3726e"
 
 [[package]]
 name = "hermit-abi"
@@ -1322,9 +1321,9 @@ dependencies = [
 
 [[package]]
 name = "hyper"
-version = "0.14.9"
+version = "0.14.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "07d6baa1b441335f3ce5098ac421fb6547c46dda735ca1bc6d0153c838f9dd83"
+checksum = "7728a72c4c7d72665fde02204bcbd93b247721025b222ef78606f14513e0fd03"
 dependencies = [
  "bytes 1.0.1",
  "futures-channel",
@@ -1338,7 +1337,7 @@ dependencies = [
  "itoa",
  "pin-project-lite 0.2.7",
  "socket2 0.4.0",
- "tokio 1.7.1",
+ "tokio 1.8.1",
  "tower-service",
  "tracing",
  "want",
@@ -1351,9 +1350,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d6183ddfa99b85da61a140bea0efc93fdf56ceaa041b37d553518030827f9905"
 dependencies = [
  "bytes 1.0.1",
- "hyper 0.14.9",
+ "hyper 0.14.10",
  "native-tls",
- "tokio 1.7.1",
+ "tokio 1.8.1",
  "tokio-native-tls",
 ]
 
@@ -1381,9 +1380,9 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
-version = "1.6.2"
+version = "1.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "824845a0bf897a9042383849b02c1bc219c2383772efcd5c6f9766fa4b81aef3"
+checksum = "bc633605454125dec4b66843673f01c7df2b89479b32e0ed634e43a91cff62a5"
 dependencies = [
  "autocfg",
  "hashbrown",
@@ -1391,9 +1390,9 @@ dependencies = [
 
 [[package]]
 name = "instant"
-version = "0.1.9"
+version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "61124eeebbd69b8190558df225adf7e4caafce0d743919e5d6b19652314ec5ec"
+checksum = "bee0328b1209d157ef001c94dd85b4f8f64139adb0eac2659f4b08382b2f474d"
 dependencies = [
  "cfg-if 1.0.0",
 ]
@@ -1589,9 +1588,9 @@ dependencies = [
 
 [[package]]
 name = "libc"
-version = "0.2.97"
+version = "0.2.98"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "12b8adadd720df158f4d70dfe7ccc6adb0472d7c55ca83445f6a5ab3e36f8fb6"
+checksum = "320cfe77175da3a483efed4bc0adc1968ca050b098ce4f2f1c13a56626128790"
 
 [[package]]
 name = "linked-hash-map"
@@ -1838,14 +1837,15 @@ dependencies = [
 
 [[package]]
 name = "nix"
-version = "0.19.1"
+version = "0.22.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b2ccba0cfe4fdf15982d1674c69b1fd80bad427d293849982668dfe454bd61f2"
+checksum = "cf1e25ee6b412c2a1e3fcb6a4499a5c1bfe7f43e014bdce9a6b6666e5aa2d187"
 dependencies = [
  "bitflags",
  "cc",
  "cfg-if 1.0.0",
  "libc",
+ "memoffset 0.6.4",
 ]
 
 [[package]]
@@ -2471,7 +2471,7 @@ dependencies = [
  "futures-util",
  "http",
  "http-body 0.4.2",
- "hyper 0.14.9",
+ "hyper 0.14.10",
  "hyper-tls",
  "ipnet",
  "js-sys",
@@ -2483,7 +2483,7 @@ dependencies = [
  "pin-project-lite 0.2.7",
  "serde 1.0.126",
  "serde_urlencoded",
- "tokio 1.7.1",
+ "tokio 1.8.1",
  "tokio-native-tls",
  "url 2.2.2",
  "wasm-bindgen",
@@ -2573,7 +2573,6 @@ dependencies = [
 [[package]]
 name = "scheduler"
 version = "0.1.0"
-source = "git+https://github.com/Zondax/filecoin-scheduling.git#2214e50e8e6ee72e11eb6b7e754f2e32c29e1bb9"
 dependencies = [
  "array_tool",
  "chrono",
@@ -2590,7 +2589,7 @@ dependencies = [
  "rust-gpu-tools 0.3.0 (git+https://github.com/Zondax/rust-gpu-tools.git?branch=unique_id)",
  "serde 1.0.126",
  "thiserror",
- "tokio 1.7.1",
+ "tokio 1.8.1",
  "toml",
  "tracing",
  "tracing-futures",
@@ -2742,7 +2741,7 @@ dependencies = [
 [[package]]
 name = "sha2raw"
 version = "3.0.2"
-source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#581ecd13560dbb3386f2b714c490e8cb37622ab6"
+source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#4c8571353caf9d540f4e022cecf842939a8f893a"
 dependencies = [
  "block-buffer 0.9.0",
  "byteorder 1.4.3",
@@ -2805,7 +2804,7 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 [[package]]
 name = "storage-proofs-core"
 version = "8.0.2"
-source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#581ecd13560dbb3386f2b714c490e8cb37622ab6"
+source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#4c8571353caf9d540f4e022cecf842939a8f893a"
 dependencies = [
  "aes",
  "anyhow",
@@ -2844,7 +2843,7 @@ dependencies = [
 [[package]]
 name = "storage-proofs-porep"
 version = "8.0.2"
-source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#581ecd13560dbb3386f2b714c490e8cb37622ab6"
+source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#4c8571353caf9d540f4e022cecf842939a8f893a"
 dependencies = [
  "anyhow",
  "bellperson",
@@ -2883,7 +2882,7 @@ dependencies = [
 [[package]]
 name = "storage-proofs-post"
 version = "8.0.2"
-source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#581ecd13560dbb3386f2b714c490e8cb37622ab6"
+source = "git+https://github.com/Zondax/rust-fil-proofs.git?branch=scheduler#4c8571353caf9d540f4e022cecf842939a8f893a"
 dependencies = [
  "anyhow",
  "bellperson",
@@ -2915,9 +2914,9 @@ checksum = "8ea5119cdb4c55b55d432abb513a0429384878c15dde60cc77b1c99de1a95a6a"
 
 [[package]]
 name = "subtle"
-version = "2.4.0"
+version = "2.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1e81da0851ada1f3e9d4312c704aa4f8806f0f9d69faaf8df2f3464b4a9437c2"
+checksum = "6bdef32e8150c2a081110b42772ffe7d7c9032b606bc226c8260fd97e0976601"
 
 [[package]]
 name = "syn"
@@ -2932,9 +2931,9 @@ dependencies = [
 
 [[package]]
 name = "synstructure"
-version = "0.12.4"
+version = "0.12.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b834f2d66f734cb897113e34aaff2f1ab4719ca946f9a7358dba8f8064148701"
+checksum = "474aaa926faa1603c40b7885a9eaea29b444d1cb2850cb7c0e37bb1a4182f4fa"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2997,18 +2996,18 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "1.0.25"
+version = "1.0.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fa6f76457f59514c7eeb4e59d891395fab0b2fd1d40723ae737d64153392e9c6"
+checksum = "93119e4feac1cbe6c798c34d3a53ea0026b0b1de6a120deef895137c0529bfe2"
 dependencies = [
  "thiserror-impl",
 ]
 
 [[package]]
 name = "thiserror-impl"
-version = "1.0.25"
+version = "1.0.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8a36768c0fbf1bb15eca10defa29526bda730a2376c2ab4393ccfa16fb1a318d"
+checksum = "060d69a0afe7796bf42e9e2ff91f5ee691fb15c53d38b4b62a9a53eb23164745"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3067,9 +3066,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.7.1"
+version = "1.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5fb2ed024293bb19f7a5dc54fe83bf86532a44c12a2bb8ba40d64a4509395ca2"
+checksum = "98c8b05dc14c75ea83d63dd391100353789f5f24b8b3866542a5e85c8be8e985"
 dependencies = [
  "autocfg",
  "bytes 1.0.1",
@@ -3098,7 +3097,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f7d995660bd2b7f8c1568414c1126076c13fbb725c40112dc0120b78eb9b717b"
 dependencies = [
  "native-tls",
- "tokio 1.7.1",
+ "tokio 1.8.1",
 ]
 
 [[package]]
@@ -3126,7 +3125,7 @@ dependencies = [
  "futures-sink",
  "log",
  "pin-project-lite 0.2.7",
- "tokio 1.7.1",
+ "tokio 1.8.1",
 ]
 
 [[package]]
