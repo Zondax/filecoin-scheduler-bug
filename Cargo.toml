@@ -14,18 +14,18 @@ rand = "0.7"
 rand_xorshift = "0.2.0"
 byte-slice-cast = "1.0.0"
 tempdir = "0.3.7"
-bellperson = "0.14.0"
+bellperson = "0.16.0"
 tempfile = "3.2.0"
 ff = { version = "0.3.1", package = "fff" }
 clap = "2.33.3"
 groupy = "0.4.1"
 
 [patch.crates-io]
-bellperson = { git = "https://github.com/Zondax/bellperson.git", branch = "scheduler", version = "0.14", default-features = false }
-neptune = { version = "3.0.0", default-features = false, git = "https://github.com/filecoin-project/neptune.git", branch = "granularity" }
+bellperson = { git = "https://github.com/Zondax/bellperson.git", branch = "scheduler", version = "0.16"}
+neptune = { version = "4.0.0", default-features = false, git = "https://github.com/Zondax/neptune.git", branch = "granularity" }
 
-[patch."https://github.com/Zondax/filecoin-scheduling.git"]
-client = { path = '../filecoin-scheduling/client' }
+#[patch."https://github.com/Zondax/filecoin-scheduling.git"]
+#client = { path = '../filecoin-scheduling/client' }
 
 [profile.dev]
 opt-level = 0
